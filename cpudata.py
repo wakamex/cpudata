@@ -4,26 +4,16 @@ import requests
 import numpy as np
 import pandas as pd
 from matplotlib import lines, pyplot as plt
-from darkmode import darkmode_orange
+import darkmode_orange
 from scipy.stats import linregress
 from matplotlib.markers import MarkerStyle
 from sklearn.neighbors import NearestNeighbors
 from sklearn.cluster import KMeans
 pd.options.display.float_format = '{:,.0f}'.format
 
-import __main__ as main_to_check_for_interactive_mode_only
-
-# make it run in both interactive and non-interactive mode
-if hasattr(main_to_check_for_interactive_mode_only, '__file__'):
-    from IPython.display import display
-    try:
-        assert display
-    except AssertionError as exc:
-        raise ValueError("display failed to import") from exc
-    INTERACTIVE = True
-else:
-    display = print  # If not in interactive mode, display is equivalent to print
-    INTERACTIVE = False
+def display(df):
+    """Print DataFrame nicely."""
+    print(df.to_string())
 
 # %%
 """
@@ -47,7 +37,8 @@ example HTML:
     </ul>
 </div>
 """
-response = requests.get("https://www.cpubenchmark.net/desktop.html#cpumark")
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+response = requests.get("https://www.cpubenchmark.net/desktop.html#cpumark", headers=headers)
 page = BeautifulSoup(response.content, "html.parser")
 chart_body = page.find("div", class_="chart_body")
 assert isinstance(chart_body, Tag)
