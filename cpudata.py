@@ -191,7 +191,6 @@ plt.scatter(frontier_prices, frontier_scores, c='white', s=50, zorder=5, edgecol
 plt.xlabel('Price ($)')
 plt.ylabel('Score')
 plt.legend()
-plt.title('CPU Price vs Performance with Efficient Frontier')
 
 plt.savefig(OUTPUT_DIR / "clusters.png", dpi=150, bbox_inches='tight')
 plt.close()
@@ -249,7 +248,8 @@ html += """    </table>
     <h2>Price Distribution</h2>
     <img src="price_histogram.png" alt="Price Histogram">
 
-    <h2>Value Clustering</h2>
+    <h2>Price vs Performance</h2>
+    <p>CPUs clustered by price/performance. The white line shows the efficient frontier — Pareto-optimal CPUs where you can't get better performance without paying more.</p>
     <img src="clusters.png" alt="CPU Clusters">
 
     <p>Data source: <a href="https://www.cpubenchmark.net/desktop.html">PassMark CPU Benchmark</a></p>
