@@ -317,6 +317,25 @@ else:
     history_file.write_text(json.dumps(history, indent=2))
     print(f"History entry for {today} updated")
 
+# %% Generate history chart
+if len(history) >= 1:
+    fig = plt.figure(figsize=(10, 5))
+    dates = [h['date'] for h in history]
+    amd_vars = [h['amd_var'] / 1e6 for h in history]  # Convert to millions
+    intel_vars = [h['intel_var'] / 1e6 for h in history]
+
+    plt.plot(dates, amd_vars, 'ro-', linewidth=2, markersize=8, label='AMD')
+    plt.plot(dates, intel_vars, 'bs-', linewidth=2, markersize=8, label='Intel')
+
+    plt.xlabel('Date')
+    plt.ylabel('VAR (millions)')
+    plt.legend()
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.savefig(OUTPUT_DIR / "history.png", dpi=150, bbox_inches='tight')
+    plt.close()
+    print(f"History chart generated: {OUTPUT_DIR / 'history.png'}")
+
 # %% Generate HTML report
 today = datetime.now().strftime("%Y-%m-%d")
 
