@@ -174,6 +174,25 @@ for i, center in enumerate(kmeans.cluster_centers_):
 for i in range(len(data)):
     plt.scatter(data[i][0], data[i][1], color=colors[kmeans.labels_[i]])
 
+# Calculate and plot the efficient frontier (Pareto frontier)
+# A CPU is Pareto-optimal if no other CPU has both higher score AND lower price
+cpu_sorted = cpu.sort_values('price')
+frontier_prices = []
+frontier_scores = []
+max_score = 0
+for _, row in cpu_sorted.iterrows():
+    if row['score'] > max_score:
+        frontier_prices.append(row['price'])
+        frontier_scores.append(row['score'])
+        max_score = row['score']
+
+plt.plot(frontier_prices, frontier_scores, 'w-', linewidth=2, label='Efficient Frontier')
+plt.scatter(frontier_prices, frontier_scores, c='white', s=50, zorder=5, edgecolors='black')
+plt.xlabel('Price ($)')
+plt.ylabel('Score')
+plt.legend()
+plt.title('CPU Price vs Performance with Efficient Frontier')
+
 plt.savefig(OUTPUT_DIR / "clusters.png", dpi=150, bbox_inches='tight')
 plt.close()
 
