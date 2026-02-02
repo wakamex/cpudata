@@ -199,6 +199,124 @@ plt.close()
 # pick the highest value item from each cluster
 # highest_value = [np.argmax(cpu[cpu.brand == brand].value) for brand in cpu.brand.unique()]
 
+# %% Calculate Value Above Replacement (VAR) for each brand
+def get_frontier(df):
+    """Calculate efficient frontier for a dataframe of CPUs."""
+    sorted_df = df.sort_values('price')
+    prices, scores = [], []
+    max_score = 0
+    for _, row in sorted_df.iterrows():
+        if row['score'] > max_score:
+            prices.append(row['price'])
+            scores.append(row['score'])
+            max_score = row['score']
+    return prices, scores
+
+def calc_auc_above_regression(frontier_prices, frontier_scores, slope, intercept, price_min, price_max):
+    """Calculate area between frontier and regression line using trapezoidal integration."""
+    if len(frontier_prices) < 2:
+        return 0.0
+
+    # Filter frontier points to price range
+    points = [(p, s) for p, s in zip(frontier_prices, frontier_scores) if price_min <= p <= price_max]
+    if len(points) < 2:
+        return 0.0
+
+    prices = [p for p, s in points]
+    scores = [s for p, s in points]
+
+    # Calculate area using trapezoidal rule
+    # Area = sum of (width * avg_height_above_regression)
+    total_area = 0.0
+    for i in range(len(prices) - 1):
+        p1, p2 = prices[i], prices[i + 1]
+        s1, s2 = scores[i], scores[i + 1]
+        # Regression values at these prices
+        r1 = slope * p1 + intercept
+        r2 = slope * p2 + intercept
+        # Height above regression at each point
+        h1 = s1 - r1
+        h2 = s2 - r2
+        # Trapezoidal area
+        width = p2 - p1
+        avg_height = (h1 + h2) / 2
+        total_area += width * avg_height
+
+    return total_area
+
+# Fit regression to all CPUs (this is the "replacement level")
+slope, intercept, _, _, _ = linregress(cpu['price'], cpu['score'])
+print(f"Regression: score = {slope:.2f} * price + {intercept:.2f}")
+
+# Get price range
+price_min, price_max = cpu['price'].min(), cpu['price'].max()
+
+# Calculate brand-specific frontiers and VAR
+var_results = {}
+brand_frontiers = {}
+for brand in ['AMD', 'Intel']:
+    brand_df = cpu[cpu.brand == brand]
+    if len(brand_df) > 0:
+        prices, scores = get_frontier(brand_df)
+        brand_frontiers[brand] = {'prices': prices, 'scores': scores}
+        var = calc_auc_above_regression(prices, scores, slope, intercept, price_min, price_max)
+        var_results[brand] = var
+        print(f"{brand} VAR: {var:,.0f}")
+
+# %% Plot brand frontiers with regression line
+fig = plt.figure(figsize=(10, 6))
+
+# Plot all CPUs by brand
+amd_df = cpu[cpu.brand == 'AMD']
+intel_df = cpu[cpu.brand == 'Intel']
+plt.scatter(amd_df['price'], amd_df['score'], alpha=0.3, c='red', label='AMD CPUs')
+plt.scatter(intel_df['price'], intel_df['score'], alpha=0.3, c='blue', label='Intel CPUs')
+
+# Plot regression line
+reg_x = np.array([price_min, price_max])
+reg_y = slope * reg_x + intercept
+plt.plot(reg_x, reg_y, 'w--', linewidth=2, label=f'Regression (baseline)')
+
+# Plot brand frontiers
+if 'AMD' in brand_frontiers:
+    plt.plot(brand_frontiers['AMD']['prices'], brand_frontiers['AMD']['scores'], 'r-', linewidth=2, label=f'AMD Frontier (VAR: {var_results["AMD"]:,.0f})')
+    plt.scatter(brand_frontiers['AMD']['prices'], brand_frontiers['AMD']['scores'], c='red', s=60, zorder=5, edgecolors='white')
+if 'Intel' in brand_frontiers:
+    plt.plot(brand_frontiers['Intel']['prices'], brand_frontiers['Intel']['scores'], 'b-', linewidth=2, label=f'Intel Frontier (VAR: {var_results["Intel"]:,.0f})')
+    plt.scatter(brand_frontiers['Intel']['prices'], brand_frontiers['Intel']['scores'], c='blue', s=60, zorder=5, edgecolors='white')
+
+plt.xlabel('Price ($)')
+plt.ylabel('Score')
+plt.legend(loc='lower right')
+plt.savefig(OUTPUT_DIR / "var_comparison.png", dpi=150, bbox_inches='tight')
+plt.close()
+
+# %% Update history timeseries
+today = datetime.now().strftime("%Y-%m-%d")
+history_file = OUTPUT_DIR / "history.json"
+if history_file.exists():
+    history = json.loads(history_file.read_text())
+else:
+    history = []
+
+# Only add if today's date isn't already in history
+if not any(h['date'] == today for h in history):
+    history.append({
+        'date': today,
+        'amd_var': var_results.get('AMD', 0),
+        'intel_var': var_results.get('Intel', 0),
+    })
+    history_file.write_text(json.dumps(history, indent=2))
+    print(f"History updated: {len(history)} entries")
+else:
+    # Update today's entry
+    for h in history:
+        if h['date'] == today:
+            h['amd_var'] = var_results.get('AMD', 0)
+            h['intel_var'] = var_results.get('Intel', 0)
+    history_file.write_text(json.dumps(history, indent=2))
+    print(f"History entry for {today} updated")
+
 # %% Generate HTML report
 today = datetime.now().strftime("%Y-%m-%d")
 
@@ -268,6 +386,10 @@ data = {
     "top10": top10[["brand", "model", "score", "price", "value"]].to_dict(orient="records"),
     "brands": brands_data,
     "frontier": [{"price": p, "score": s} for p, s in zip(frontier_prices, frontier_scores)],
+    "var": var_results,
+    "brand_frontiers": {brand: [{"price": p, "score": s} for p, s in zip(f['prices'], f['scores'])] for brand, f in brand_frontiers.items()},
+    "regression": {"slope": slope, "intercept": intercept},
+    "history": history,
 }
 (OUTPUT_DIR / "data.json").write_text(json.dumps(data, indent=2))
 print(f"JSON generated: {OUTPUT_DIR / 'data.json'}")
