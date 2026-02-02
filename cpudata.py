@@ -9,7 +9,13 @@ from scipy.stats import linregress
 from matplotlib.markers import MarkerStyle
 from sklearn.neighbors import NearestNeighbors
 from sklearn.cluster import KMeans
+from pathlib import Path
+from datetime import datetime
 pd.options.display.float_format = '{:,.0f}'.format
+
+# Output directory for GitHub Pages
+OUTPUT_DIR = Path("docs")
+OUTPUT_DIR.mkdir(exist_ok=True)
 
 def display(df):
     """Print DataFrame nicely."""
@@ -79,7 +85,8 @@ i = np.argmin(hist_values)
 print(f"first empty bin {bins[i]:,.0f}-{bins[i+1]:,.0f}")
 print(f"keeping values below {bins[i]:,.0f}")
 plt.hist(cpu["price"], bins=nbins)
-plt.show()
+plt.savefig(OUTPUT_DIR / "price_histogram.png", dpi=150, bbox_inches='tight')
+plt.close()
 
 # %%
 # Remove outliers based on the index i
@@ -104,6 +111,7 @@ def addexp(df):
 
 # %%
 n=len(cpu)
+iteration = 0
 while n > 50:
     fig = plt.figure(figsize=(8, 4))
 
@@ -121,6 +129,10 @@ while n > 50:
     prettyplot(cpu)
     plt.plot(cpu["price"], cpu["exp"], "r-", label="Regression Line");
     plt.title(f"new regression n={len(cpu)}")
+
+    plt.savefig(OUTPUT_DIR / f"regression_{iteration}.png", dpi=150, bbox_inches='tight')
+    plt.close()
+    iteration += 1
     n = len(cpu)
 
 # %% show df by value
@@ -162,9 +174,71 @@ for i, center in enumerate(kmeans.cluster_centers_):
 for i in range(len(data)):
     plt.scatter(data[i][0], data[i][1], color=colors[kmeans.labels_[i]])
 
-plt.show()
+plt.savefig(OUTPUT_DIR / "clusters.png", dpi=150, bbox_inches='tight')
+plt.close()
 
 # pick the highest value item from each cluster
 # highest_value = [np.argmax(cpu[cpu.brand == brand].value) for brand in cpu.brand.unique()]
+
+# %% Generate HTML report
+today = datetime.now().strftime("%Y-%m-%d")
+
+html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CPU Price/Performance Analysis</title>
+    <style>
+        body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #1a1a1a; color: #e0e0e0; }}
+        h1, h2 {{ color: #ff9800; }}
+        table {{ border-collapse: collapse; width: 100%; margin: 20px 0; }}
+        th, td {{ border: 1px solid #444; padding: 8px; text-align: left; }}
+        th {{ background: #333; color: #ff9800; }}
+        tr:nth-child(even) {{ background: #252525; }}
+        tr:hover {{ background: #333; }}
+        img {{ max-width: 100%; height: auto; margin: 20px 0; border-radius: 8px; }}
+        .updated {{ color: #888; font-size: 0.9em; }}
+        a {{ color: #ff9800; }}
+    </style>
+</head>
+<body>
+    <h1>CPU Price/Performance Analysis</h1>
+    <p class="updated">Last updated: {today}</p>
+
+    <h2>Top 10 Best Value CPUs</h2>
+    <table>
+        <tr><th>Brand</th><th>Model</th><th>Score</th><th>Price</th><th>Value</th></tr>
+"""
+
+for _, row in top10.iterrows():
+    html += f"        <tr><td>{row['brand']}</td><td>{row['model']}</td><td>{row['score']:,.0f}</td><td>${row['price']:,.0f}</td><td>{row['value']:.2f}</td></tr>\n"
+
+html += """    </table>
+
+    <h2>Brand Summary (Best Value CPUs)</h2>
+    <table>
+        <tr><th>Brand</th><th>Count</th><th>Avg Score</th><th>Avg Price</th><th>Avg Value</th></tr>
+"""
+
+cpug = cpu.groupby("brand").agg({"brand": "count", "score": "mean", "price": "mean", "value": "mean"})
+for brand, row in cpug.iterrows():
+    html += f"        <tr><td>{brand}</td><td>{row['brand']:.0f}</td><td>{row['score']:,.0f}</td><td>${row['price']:,.0f}</td><td>{row['value']:.2f}</td></tr>\n"
+
+html += """    </table>
+
+    <h2>Price Distribution</h2>
+    <img src="price_histogram.png" alt="Price Histogram">
+
+    <h2>Value Clustering</h2>
+    <img src="clusters.png" alt="CPU Clusters">
+
+    <p>Data source: <a href="https://www.cpubenchmark.net/desktop.html">PassMark CPU Benchmark</a></p>
+</body>
+</html>
+"""
+
+(OUTPUT_DIR / "index.html").write_text(html)
+print(f"Report generated: {OUTPUT_DIR / 'index.html'}")
 
 # %%

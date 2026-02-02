@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CPU Price/Performance Analysis</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #1a1a1a; color: #e0e0e0; }
+        h1, h2 { color: #ff9800; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #444; padding: 8px; text-align: left; }
+        th { background: #333; color: #ff9800; }
+        tr:nth-child(even) { background: #252525; }
+        tr:hover { background: #333; }
+        img { max-width: 100%; height: auto; margin: 20px 0; border-radius: 8px; }
+        .updated { color: #888; font-size: 0.9em; }
+        a { color: #ff9800; }
+    </style>
+</head>
+<body>
+    <h1>CPU Price/Performance Analysis</h1>
+    <p class="updated">Last updated: 2026-02-01</p>
+
+    <h2>Top 10 Best Value CPUs</h2>
+    <table>
+        <tr><th>Brand</th><th>Model</th><th>Score</th><th>Price</th><th>Value</th></tr>
+        <tr><td>Intel</td><td>Core Ultra 5 245KF</td><td>43,266</td><td>$200</td><td>216.34</td></tr>
+        <tr><td>Intel</td><td>Core Ultra 5 225F</td><td>31,323</td><td>$150</td><td>208.83</td></tr>
+        <tr><td>Intel</td><td>Core Ultra 7 265KF</td><td>58,592</td><td>$290</td><td>202.08</td></tr>
+        <tr><td>Intel</td><td>Core Ultra 5 245K</td><td>43,282</td><td>$216</td><td>200.39</td></tr>
+        <tr><td>Intel</td><td>Core Ultra 7 265K</td><td>58,716</td><td>$294</td><td>199.87</td></tr>
+        <tr><td>Intel</td><td>Core Ultra 7 265F</td><td>49,513</td><td>$276</td><td>179.39</td></tr>
+        <tr><td>AMD</td><td>Ryzen 5 8400F</td><td>24,492</td><td>$144</td><td>170.18</td></tr>
+        <tr><td>AMD</td><td>Ryzen 5 9600X</td><td>30,015</td><td>$184</td><td>163.12</td></tr>
+        <tr><td>Intel</td><td>Core Ultra 5 225</td><td>30,404</td><td>$199</td><td>152.78</td></tr>
+        <tr><td>Intel</td><td>Core Ultra 7 265</td><td>49,702</td><td>$327</td><td>152.08</td></tr>
+    </table>
+
+    <h2>Brand Summary (Best Value CPUs)</h2>
+    <table>
+        <tr><th>Brand</th><th>Count</th><th>Avg Score</th><th>Avg Price</th><th>Avg Value</th></tr>
+        <tr><td>AMD</td><td>21</td><td>34,702</td><td>$329</td><td>112.53</td></tr>
+        <tr><td>Intel</td><td>24</td><td>37,451</td><td>$317</td><td>127.44</td></tr>
+    </table>
+
+    <h2>Price Distribution</h2>
+    <img src="price_histogram.png" alt="Price Histogram">
+
+    <h2>Value Clustering</h2>
+    <img src="clusters.png" alt="CPU Clusters">
+
+    <p>Data source: <a href="https://www.cpubenchmark.net/desktop.html">PassMark CPU Benchmark</a></p>
+</body>
+</html>
