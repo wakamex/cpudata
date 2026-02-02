@@ -1,0 +1,137 @@
+{
+  "updated": "2026-02-01",
+  "top10": [
+    {
+      "brand": "Intel",
+      "model": "Core Ultra 5 245KF",
+      "score": 43266.0,
+      "price": 199.99,
+      "value": 216.34081704085204
+    },
+    {
+      "brand": "Intel",
+      "model": "Core Ultra 5 225F",
+      "score": 31323.0,
+      "price": 149.99,
+      "value": 208.83392226148408
+    },
+    {
+      "brand": "Intel",
+      "model": "Core Ultra 7 265KF",
+      "score": 58592.0,
+      "price": 289.95,
+      "value": 202.0762200379376
+    },
+    {
+      "brand": "Intel",
+      "model": "Core Ultra 5 245K",
+      "score": 43282.0,
+      "price": 215.99,
+      "value": 200.38890689383766
+    },
+    {
+      "brand": "Intel",
+      "model": "Core Ultra 7 265K",
+      "score": 58716.0,
+      "price": 293.77,
+      "value": 199.87064710487797
+    },
+    {
+      "brand": "Intel",
+      "model": "Core Ultra 7 265F",
+      "score": 49513.0,
+      "price": 276.0,
+      "value": 179.39492753623188
+    },
+    {
+      "brand": "AMD",
+      "model": "Ryzen 5 8400F",
+      "score": 24492.0,
+      "price": 143.92,
+      "value": 170.1778765981101
+    },
+    {
+      "brand": "AMD",
+      "model": "Ryzen 5 9600X",
+      "score": 30015.0,
+      "price": 184.0,
+      "value": 163.125
+    },
+    {
+      "brand": "Intel",
+      "model": "Core Ultra 5 225",
+      "score": 30404.0,
+      "price": 199.0,
+      "value": 152.78391959798995
+    },
+    {
+      "brand": "Intel",
+      "model": "Core Ultra 7 265",
+      "score": 49702.0,
+      "price": 326.81,
+      "value": 152.08224962516448
+    }
+  ],
+  "brands": [
+    {
+      "brand": "AMD",
+      "count": 21,
+      "score": 34701.619047619046,
+      "price": 329.1952380952381,
+      "value": 112.52669940664427
+    },
+    {
+      "brand": "Intel",
+      "count": 24,
+      "score": 37450.875,
+      "price": 317.27333333333337,
+      "value": 127.43563466438934
+    }
+  ],
+  "frontier": [
+    {
+      "price": 82.0,
+      "score": 5567.0
+    },
+    {
+      "price": 143.92,
+      "score": 24492.0
+    },
+    {
+      "price": 149.99,
+      "score": 31323.0
+    },
+    {
+      "price": 199.99,
+      "score": 43266.0
+    },
+    {
+      "price": 215.99,
+      "score": 43282.0
+    },
+    {
+      "price": 276.0,
+      "score": 49513.0
+    },
+    {
+      "price": 289.95,
+      "score": 58592.0
+    },
+    {
+      "price": 293.77,
+      "score": 58716.0
+    },
+    {
+      "price": 519.0,
+      "score": 65839.0
+    },
+    {
+      "price": 569.97,
+      "score": 67415.0
+    },
+    {
+      "price": 675.59,
+      "score": 70178.0
+    }
+  ]
+}

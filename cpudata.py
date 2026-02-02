@@ -11,6 +11,7 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.cluster import KMeans
 from pathlib import Path
 from datetime import datetime
+import json
 pd.options.display.float_format = '{:,.0f}'.format
 
 # Output directory for GitHub Pages
@@ -259,5 +260,16 @@ html += """    </table>
 
 (OUTPUT_DIR / "index.html").write_text(html)
 print(f"Report generated: {OUTPUT_DIR / 'index.html'}")
+
+# %% Generate JSON for client-side rendering
+brands_data = [{"brand": brand, "count": int(row["brand"]), "score": row["score"], "price": row["price"], "value": row["value"]} for brand, row in cpug.iterrows()]
+data = {
+    "updated": today,
+    "top10": top10[["brand", "model", "score", "price", "value"]].to_dict(orient="records"),
+    "brands": brands_data,
+    "frontier": [{"price": p, "score": s} for p, s in zip(frontier_prices, frontier_scores)],
+}
+(OUTPUT_DIR / "data.json").write_text(json.dumps(data, indent=2))
+print(f"JSON generated: {OUTPUT_DIR / 'data.json'}")
 
 # %%
