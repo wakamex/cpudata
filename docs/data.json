@@ -131,9 +131,10 @@
     }
   ],
   "var": {
-    "AMD": 6821098.493615833,
-    "Intel": 856269.1568565508
+    "AMD": 8146746.618519567,
+    "Intel": 11998043.031817406
   },
+  "var_method": "closed-positive-frontier-v2",
   "brand_frontiers": {
     "AMD": [
       {
@@ -204,6 +205,10 @@
       }
     ]
   },
+  "frontier_extensions": {
+    "AMD": 1099.9999218239288,
+    "Intel": 1010.0406863448626
+  },
   "regression": {
     "slope": 40.318261718042415,
     "intercept": 27885.915262076636
@@ -211,853 +216,1023 @@
   "history": [
     {
       "date": "2026-02-01",
-      "amd_var": 5107290.843867637,
-      "intel_var": 7236128.834822566
+      "amd_var": 5735642.935855636,
+      "intel_var": 8943105.1890761,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-02",
-      "amd_var": 5107290.843867637,
-      "intel_var": 7236128.834822566
+      "amd_var": 5735642.935855636,
+      "intel_var": 8943105.1890761,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-03",
-      "amd_var": 5101463.7291338425,
-      "intel_var": 7027873.213786686
+      "amd_var": 5726818.903636266,
+      "intel_var": 9022531.246461617,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-04",
-      "amd_var": 4959107.935961021,
-      "intel_var": 6957796.085282578
+      "amd_var": 5604001.574295754,
+      "intel_var": 8990510.042921549,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-05",
-      "amd_var": 4943197.108674093,
-      "intel_var": 7239552.709119241
+      "amd_var": 5584494.438099274,
+      "intel_var": 8841296.567121089,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-06",
-      "amd_var": 4872920.621799802,
-      "intel_var": 7089012.616127539
+      "amd_var": 5507571.485127356,
+      "intel_var": 8685937.939327458,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-07",
-      "amd_var": 4878136.586860089,
-      "intel_var": 7091643.562471907
+      "amd_var": 5516658.550222811,
+      "intel_var": 8693433.817333236,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-08",
-      "amd_var": 4870763.580416217,
-      "intel_var": 7340961.4920454025
+      "amd_var": 5529417.78497039,
+      "intel_var": 9106599.290245332,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-09",
-      "amd_var": 4836603.74728608,
-      "intel_var": 7272171.498707993
+      "amd_var": 5460602.0781504465,
+      "intel_var": 8988462.07675721,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-10",
-      "amd_var": 4808232.319866918,
-      "intel_var": 7195731.544149436
+      "amd_var": 5480655.410614264,
+      "intel_var": 8982257.105537308,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-11",
-      "amd_var": 4842288.38959404,
-      "intel_var": 7155051.872968419
+      "amd_var": 5519577.28105789,
+      "intel_var": 8946633.432395164,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-12",
-      "amd_var": 4849186.904718104,
-      "intel_var": 7260403.593824103
+      "amd_var": 5564138.488953172,
+      "intel_var": 9102988.250621341,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-13",
-      "amd_var": 4847370.718858361,
-      "intel_var": 7260274.2932160925
+      "amd_var": 5561444.617707019,
+      "intel_var": 9101387.57392559,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-14",
-      "amd_var": 4848320.560128257,
-      "intel_var": 7277599.674699522
+      "amd_var": 5571640.080892416,
+      "intel_var": 9129848.023307852,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-15",
-      "amd_var": 4847295.4601710485,
-      "intel_var": 7277781.32261377
+      "amd_var": 5570507.006838309,
+      "intel_var": 9129249.660895946,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-16",
-      "amd_var": 4836769.691584017,
-      "intel_var": 6941596.958988835
+      "amd_var": 5513863.846659383,
+      "intel_var": 8730088.96188944,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-17",
-      "amd_var": 4846915.984645108,
-      "intel_var": 7042306.628577822
+      "amd_var": 5527670.808053898,
+      "intel_var": 8700716.307398243,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-18",
-      "amd_var": 4838430.803470932,
-      "intel_var": 6907619.400269317
+      "amd_var": 5489688.76818049,
+      "intel_var": 8565771.999876784,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-19",
-      "amd_var": 4775531.078435597,
-      "intel_var": 7203737.521793007
+      "amd_var": 5441818.823486002,
+      "intel_var": 9267141.687411018,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-20",
-      "amd_var": 4779048.548215991,
-      "intel_var": 6975092.0721049495
+      "amd_var": 5451417.815269095,
+      "intel_var": 9046511.023051897,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-21",
-      "amd_var": 4782374.240957618,
-      "intel_var": 7004598.204548546
+      "amd_var": 5469099.576113643,
+      "intel_var": 9096055.985651633,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-22",
-      "amd_var": 4790283.423061427,
-      "intel_var": 7084438.723192057
+      "amd_var": 5468119.625923652,
+      "intel_var": 9020457.937624594,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-23",
-      "amd_var": 4783969.896205453,
-      "intel_var": 7003120.162420068
+      "amd_var": 5474923.0859655645,
+      "intel_var": 9100891.930065267,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-24",
-      "amd_var": 4784433.551640296,
-      "intel_var": 7004108.596925506
+      "amd_var": 5474505.257265609,
+      "intel_var": 9100281.951176293,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-25",
-      "amd_var": 4772329.0907766735,
-      "intel_var": 7148103.947497875
+      "amd_var": 5482781.461163188,
+      "intel_var": 9271440.805480132,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-26",
-      "amd_var": 4678701.509721452,
-      "intel_var": 7128100.781008277
+      "amd_var": 5294870.49643236,
+      "intel_var": 9119322.523848634,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-27",
-      "amd_var": 4670561.011547922,
-      "intel_var": 6770760.365181072
+      "amd_var": 5274211.5783356335,
+      "intel_var": 8743943.103073632,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-02-28",
-      "amd_var": 4677855.132412275,
-      "intel_var": 7200353.502703307
+      "amd_var": 5299201.252654868,
+      "intel_var": 9199030.039752387,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-01",
-      "amd_var": 4681798.210971135,
-      "intel_var": 7230774.905123741
+      "amd_var": 5318029.348622176,
+      "intel_var": 9249292.197641203,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-02",
-      "amd_var": 4655907.403488706,
-      "intel_var": 7220230.107737389
+      "amd_var": 5275403.246280066,
+      "intel_var": 9213745.059087867,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-03",
-      "amd_var": 4665789.864888573,
-      "intel_var": 7327657.786154504
+      "amd_var": 5288771.943043004,
+      "intel_var": 9184303.935012922,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-04",
-      "amd_var": 4681539.0042004045,
-      "intel_var": 7334942.436202488
+      "amd_var": 5316407.951538026,
+      "intel_var": 9208091.709871568,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-05",
-      "amd_var": 4518795.4578896705,
-      "intel_var": 7258105.479266309
+      "amd_var": 5045528.34399268,
+      "intel_var": 8977229.459353019,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-06",
-      "amd_var": 4710007.351973968,
-      "intel_var": 7345570.206671275
+      "amd_var": 5369884.1455379985,
+      "intel_var": 9251594.169204457,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-07",
-      "amd_var": 4518014.612356713,
-      "intel_var": 7256877.159690501
+      "amd_var": 5043939.499152732,
+      "intel_var": 8974455.407133302,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-08",
-      "amd_var": 4643853.3180124685,
-      "intel_var": 6861086.878159079
+      "amd_var": 5224495.854795968,
+      "intel_var": 8656912.02869941,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-09",
-      "amd_var": 4511084.580303335,
-      "intel_var": 6797150.202719507
+      "amd_var": 5010957.233361105,
+      "intel_var": 8475680.364503028,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-10",
-      "amd_var": 4506405.920001642,
-      "intel_var": 6760130.836899129
+      "amd_var": 4993250.594533827,
+      "intel_var": 8419875.870896712,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-11",
-      "amd_var": 4503449.184317739,
-      "intel_var": 6702844.678643754
+      "amd_var": 4977759.655606187,
+      "intel_var": 8344154.337980451,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-12",
-      "amd_var": 4574991.101216234,
-      "intel_var": 7117769.614007266
+      "amd_var": 5113031.348161505,
+      "intel_var": 8991938.379864585,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-13",
-      "amd_var": 4552500.976712672,
-      "intel_var": 7410155.751177015
+      "amd_var": 5104811.964567262,
+      "intel_var": 9302789.317053517,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-14",
-      "amd_var": 4530959.123387326,
-      "intel_var": 6823129.680196889
+      "amd_var": 5049825.810075734,
+      "intel_var": 8664768.809272248,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-15",
-      "amd_var": 4536608.327518265,
-      "intel_var": 7197995.950978313
+      "amd_var": 5056835.251326483,
+      "intel_var": 8904536.546392627,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-16",
-      "amd_var": 4703228.821972406,
-      "intel_var": 7263413.891775994
+      "amd_var": 5353956.054113552,
+      "intel_var": 9153573.91593602,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-17",
-      "amd_var": 4525387.253089094,
-      "intel_var": 6839990.642955836
+      "amd_var": 4999484.477315156,
+      "intel_var": 8478780.166370971,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-18",
-      "amd_var": 4528320.077898026,
-      "intel_var": 6778345.190076062
+      "amd_var": 5030232.216486971,
+      "intel_var": 8458500.839855278,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-19",
-      "amd_var": 4528232.426471058,
-      "intel_var": 6779911.8844823
+      "amd_var": 5029408.011018637,
+      "intel_var": 8458995.762134567,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-20",
-      "amd_var": 4528170.967538055,
-      "intel_var": 6778447.156507135
+      "amd_var": 5028479.743881749,
+      "intel_var": 8457737.970478874,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-21",
-      "amd_var": 4305027.47929122,
-      "intel_var": 6703109.061969692
+      "amd_var": 4654488.726162067,
+      "intel_var": 8146652.997638209,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-22",
-      "amd_var": 4306902.355262451,
-      "intel_var": 6698331.69592049
+      "amd_var": 4656879.700913391,
+      "intel_var": 8136609.583457885,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-23",
-      "amd_var": 4269891.223974366,
-      "intel_var": 6523653.324482447
+      "amd_var": 4557061.183691349,
+      "intel_var": 7851998.038928301,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-24",
-      "amd_var": 4269891.223974366,
-      "intel_var": 6523653.324482447
+      "amd_var": 4557061.183691349,
+      "intel_var": 7851998.038928301,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-25",
-      "amd_var": 4271566.11996847,
-      "intel_var": 6526480.825080188
+      "amd_var": 4558449.821035708,
+      "intel_var": 7854232.748437569,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-26",
-      "amd_var": 4338317.265589317,
-      "intel_var": 7225695.195543838
+      "amd_var": 4731844.1555154,
+      "intel_var": 8734199.616684161,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-27",
-      "amd_var": 4322420.743154297,
-      "intel_var": 7231145.464505953
+      "amd_var": 4684747.742326917,
+      "intel_var": 8690028.892539263,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-28",
-      "amd_var": 4315760.609401134,
-      "intel_var": 7197873.3478658525
+      "amd_var": 4666417.457309046,
+      "intel_var": 8637607.067852205,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-29",
-      "amd_var": 4318089.301210666,
-      "intel_var": 7199308.88861484
+      "amd_var": 4668305.01266324,
+      "intel_var": 8638400.469305199,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-30",
-      "amd_var": 4277843.531683178,
-      "intel_var": 6596041.736019242
+      "amd_var": 4587102.381029604,
+      "intel_var": 7966221.647846293,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-03-31",
-      "amd_var": 4308121.685644023,
-      "intel_var": 6981044.890707817
+      "amd_var": 4652657.920048722,
+      "intel_var": 8411883.145442102,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-01",
-      "amd_var": 4308152.6212261915,
-      "intel_var": 7193939.777332028
+      "amd_var": 4653154.877399503,
+      "intel_var": 8622188.958617572,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-02",
-      "amd_var": 4323525.021289427,
-      "intel_var": 7180798.59513893
+      "amd_var": 4699574.670391184,
+      "intel_var": 8659335.897628283,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-03",
-      "amd_var": 4311699.009616117,
-      "intel_var": 7194940.128197953
+      "amd_var": 4669590.041687594,
+      "intel_var": 8679304.94531393,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-04",
-      "amd_var": 4313008.25977324,
-      "intel_var": 7196532.939124228
+      "amd_var": 4671005.726005921,
+      "intel_var": 8681521.436027018,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-05",
-      "amd_var": 4312874.128667166,
-      "intel_var": 7196318.104247382
+      "amd_var": 4670928.589125049,
+      "intel_var": 8681415.218566878,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-06",
-      "amd_var": 4312874.128667166,
-      "intel_var": 7196318.104247382
+      "amd_var": 4670928.589125049,
+      "intel_var": 8681415.218566878,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-07",
-      "amd_var": 4312521.695376126,
-      "intel_var": 7196150.27352947
+      "amd_var": 4670381.207362096,
+      "intel_var": 8680866.117703585,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-08",
-      "amd_var": 4349372.113361107,
-      "intel_var": 7211829.356572924
+      "amd_var": 4726991.156789031,
+      "intel_var": 8728932.988589859,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-09",
-      "amd_var": 4339137.1820498165,
-      "intel_var": 7372490.9821221195
+      "amd_var": 4722531.702738537,
+      "intel_var": 8899268.708975606,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-10",
-      "amd_var": 4349345.674154054,
-      "intel_var": 7390569.65530059
+      "amd_var": 4726360.107044111,
+      "intel_var": 8907727.639818069,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-11",
-      "amd_var": 4331107.904276712,
-      "intel_var": 7060066.467848298
+      "amd_var": 4655052.400949882,
+      "intel_var": 8485797.648391608,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-12",
-      "amd_var": 4113171.0180063155,
-      "intel_var": 7381169.2325172
+      "amd_var": 4898581.865022653,
+      "intel_var": 9327022.255405456,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-13",
-      "amd_var": 4112166.4563738694,
-      "intel_var": 7380943.670846911
+      "amd_var": 4896703.723721342,
+      "intel_var": 9327034.146619648,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-14",
-      "amd_var": 4101998.8022081745,
-      "intel_var": 7392706.631695759
+      "amd_var": 4851090.75084646,
+      "intel_var": 9300400.892453656,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-15",
-      "amd_var": 4074509.142432955,
-      "intel_var": 7681584.452990863
+      "amd_var": 4880973.487457587,
+      "intel_var": 9107506.667533446,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-16",
-      "amd_var": 4234072.458573658,
-      "intel_var": 7470868.783062618
+      "amd_var": 5107936.085441948,
+      "intel_var": 9498073.77455179,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-17",
-      "amd_var": 4234072.458573658,
-      "intel_var": 7470868.783062618
+      "amd_var": 5107936.085441948,
+      "intel_var": 9498073.77455179,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-18",
-      "amd_var": 4234072.458573658,
-      "intel_var": 7470868.783062618
+      "amd_var": 5107936.085441948,
+      "intel_var": 9498073.77455179,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-19",
-      "amd_var": 4234072.458573658,
-      "intel_var": 7470868.783062618
+      "amd_var": 5107936.085441948,
+      "intel_var": 9498073.77455179,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-20",
-      "amd_var": 4049112.81104008,
-      "intel_var": 7295251.280025892
+      "amd_var": 4789824.698228357,
+      "intel_var": 9134165.332490709,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-21",
-      "amd_var": 4072564.648928863,
-      "intel_var": 7269663.348368408
+      "amd_var": 4892144.140235896,
+      "intel_var": 9191452.488206306,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-22",
-      "amd_var": 4072235.0758723766,
-      "intel_var": 7242752.094566083
+      "amd_var": 4889856.478856029,
+      "intel_var": 9202580.177075163,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-23",
-      "amd_var": 4060866.688823766,
-      "intel_var": 7255243.987617499
+      "amd_var": 4838325.388795968,
+      "intel_var": 9171798.084943034,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-24",
-      "amd_var": 4062575.164763483,
-      "intel_var": 7251869.482896601
+      "amd_var": 4847560.936480202,
+      "intel_var": 9177706.20424549,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-25",
-      "amd_var": 4060387.2188538415,
-      "intel_var": 7262986.13136044
+      "amd_var": 4856880.22886611,
+      "intel_var": 9197868.689866755,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-26",
-      "amd_var": 4036076.3931408483,
-      "intel_var": 7261789.451625397
+      "amd_var": 4827509.953676488,
+      "intel_var": 9186215.035996335,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-27",
-      "amd_var": 4239209.780748338,
-      "intel_var": 7329714.476445794
+      "amd_var": 5216853.331761361,
+      "intel_var": 9494027.696663488,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-28",
-      "amd_var": 4064905.3872075607,
-      "intel_var": 7271591.329630835
+      "amd_var": 4865899.088464742,
+      "intel_var": 9213562.251905935,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-29",
-      "amd_var": 4036080.244697514,
-      "intel_var": 7287804.294178288
+      "amd_var": 4812371.108388904,
+      "intel_var": 9156942.612037469,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-04-30",
-      "amd_var": 4036080.244697514,
-      "intel_var": 7287804.294178288
+      "amd_var": 4812371.108388904,
+      "intel_var": 9156942.612037469,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-01",
-      "amd_var": 3363675.0948584797,
-      "intel_var": 7135605.864890037
+      "amd_var": 3900889.638960104,
+      "intel_var": 8161844.4777223095,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-02",
-      "amd_var": 3299672.5939537026,
-      "intel_var": 6867044.661393855
+      "amd_var": 3817415.57986287,
+      "intel_var": 8254251.25989056,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-03",
-      "amd_var": 2922427.519874775,
-      "intel_var": 2584452.237660462
+      "amd_var": 3532661.900189901,
+      "intel_var": 9975997.4371988,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-04",
-      "amd_var": 2870899.547341198,
-      "intel_var": 2578069.8679643143
+      "amd_var": 3473306.6428695237,
+      "intel_var": 9914943.117428705,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-05",
-      "amd_var": 3414245.7545242687,
-      "intel_var": 3509692.638946608
+      "amd_var": 4131514.205510256,
+      "intel_var": 9588813.959157221,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-06",
-      "amd_var": 3421689.959386212,
-      "intel_var": 3291606.814214422
+      "amd_var": 4160232.461819469,
+      "intel_var": 9663767.41312875,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-07",
-      "amd_var": 3421689.959386212,
-      "intel_var": 3291606.814214422
+      "amd_var": 4160232.461819469,
+      "intel_var": 9663767.41312875,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-08",
-      "amd_var": 3421689.959386212,
-      "intel_var": 3291606.814214422
+      "amd_var": 4160232.461819469,
+      "intel_var": 9663767.41312875,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-09",
-      "amd_var": 3421689.959386212,
-      "intel_var": 3291606.814214422
+      "amd_var": 4160232.461819469,
+      "intel_var": 9663767.41312875,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-10",
-      "amd_var": 3421689.959386212,
-      "intel_var": 3291606.814214422
+      "amd_var": 4160232.461819469,
+      "intel_var": 9663767.41312875,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-11",
-      "amd_var": 3421689.959386212,
-      "intel_var": 3291606.814214422
+      "amd_var": 4160232.461819469,
+      "intel_var": 9663767.41312875,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-12",
-      "amd_var": 3421689.959386212,
-      "intel_var": 3291606.814214422
+      "amd_var": 4160232.461819469,
+      "intel_var": 9663767.41312875,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-13",
-      "amd_var": 3339152.6008526934,
-      "intel_var": 3366503.675596386
+      "amd_var": 4086404.869018032,
+      "intel_var": 9745716.893107302,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-14",
-      "amd_var": 3280535.0128283007,
-      "intel_var": 3365882.0537022166
+      "amd_var": 3994200.3288333733,
+      "intel_var": 9664529.751525255,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-15",
-      "amd_var": 3280101.047675538,
-      "intel_var": 3367433.0359169636
+      "amd_var": 3994365.396210034,
+      "intel_var": 9647028.11960473,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-16",
-      "amd_var": 3280219.636676673,
-      "intel_var": 3367662.2741343454
+      "amd_var": 3994504.702988299,
+      "intel_var": 9649702.280135859,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-17",
-      "amd_var": 8685630.446077071,
-      "intel_var": 1676992.6657358184
+      "amd_var": 10854075.937258784,
+      "intel_var": 14699066.217112923,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-18",
-      "amd_var": 8885234.708630465,
-      "intel_var": 1716958.7130103263
+      "amd_var": 11081197.837831676,
+      "intel_var": 14745866.482190618,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-19",
-      "amd_var": 8884580.060745433,
-      "intel_var": 1717041.8553904677
+      "amd_var": 11079946.247161508,
+      "intel_var": 14745950.912533872,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-20",
-      "amd_var": 8915044.524908187,
-      "intel_var": 1605759.4596799763
+      "amd_var": 11094259.25264451,
+      "intel_var": 14663093.995965596,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-21",
-      "amd_var": 8929265.77149906,
-      "intel_var": 1535266.6634518337
+      "amd_var": 11136344.88262618,
+      "intel_var": 14624515.781755647,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-22",
-      "amd_var": 8929265.77149906,
-      "intel_var": 1535266.6634518337
+      "amd_var": 11136344.88262618,
+      "intel_var": 14624515.781755647,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-23",
-      "amd_var": 8911023.838987496,
-      "intel_var": 1310794.5927156736
+      "amd_var": 11070468.210917354,
+      "intel_var": 14331733.639889566,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-24",
-      "amd_var": 8905995.07372266,
-      "intel_var": 1311957.903086226
+      "amd_var": 11044021.257972818,
+      "intel_var": 14335514.011417102,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-25",
-      "amd_var": 8959131.06957134,
-      "intel_var": 2252930.957185276
+      "amd_var": 11040863.07668269,
+      "intel_var": 13987047.535919745,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-26",
-      "amd_var": 8950240.88678061,
-      "intel_var": 2253065.185453603
+      "amd_var": 11008958.620249292,
+      "intel_var": 13934911.686837748,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-27",
-      "amd_var": 8966599.712578917,
-      "intel_var": 2168339.924516947
+      "amd_var": 10953569.798911138,
+      "intel_var": 13820981.453027325,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-28",
-      "amd_var": 9085854.140618546,
-      "intel_var": 1311129.635897968
+      "amd_var": 10970667.716250045,
+      "intel_var": 13455366.92681076,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-29",
-      "amd_var": 9066943.959402408,
-      "intel_var": 1348004.1611084775
+      "amd_var": 10988027.219637925,
+      "intel_var": 13565735.540102107,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-30",
-      "amd_var": 7990698.316937267,
-      "intel_var": 1401090.9721383408
+      "amd_var": 9887960.459838038,
+      "intel_var": 13599257.417201702,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-05-31",
-      "amd_var": 7990428.214447689,
-      "intel_var": 1402867.1382506336
+      "amd_var": 9888579.252764715,
+      "intel_var": 13578201.196301183,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-01",
-      "amd_var": 7661363.810129911,
-      "intel_var": 1439112.6823616845
+      "amd_var": 9127926.301866097,
+      "intel_var": 12963751.2909898,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-02",
-      "amd_var": 7666183.903725838,
-      "intel_var": 1439292.1592469781
+      "amd_var": 9143271.336333849,
+      "intel_var": 12970402.987220148,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-03",
-      "amd_var": 7676639.256666229,
-      "intel_var": 1315111.7521332344
+      "amd_var": 9111093.76300041,
+      "intel_var": 12799932.132847913,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-04",
-      "amd_var": 7808795.970102856,
-      "intel_var": 1320992.3167396968
+      "amd_var": 9339406.432320315,
+      "intel_var": 13005572.05986628,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-05",
-      "amd_var": 7819261.830476256,
-      "intel_var": 1282403.3069546274
+      "amd_var": 9348005.163629211,
+      "intel_var": 12969810.51110155,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-06",
-      "amd_var": 7594229.844094539,
-      "intel_var": 1424366.6466121655
+      "amd_var": 9041052.93612171,
+      "intel_var": 12988402.117579076,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-07",
-      "amd_var": 7563608.23979866,
-      "intel_var": 1395600.790029326
+      "amd_var": 8977932.040071856,
+      "intel_var": 12875009.292401358,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-08",
-      "amd_var": 7701684.348974833,
-      "intel_var": 1422566.039169338
+      "amd_var": 9113966.84911765,
+      "intel_var": 12883641.993130038,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-09",
-      "amd_var": 7720327.070388436,
-      "intel_var": 1403425.7020656988
+      "amd_var": 9114511.888062246,
+      "intel_var": 12864332.362784816,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-10",
-      "amd_var": 7752483.017606121,
-      "intel_var": 1347597.875701304
+      "amd_var": 9142515.870226854,
+      "intel_var": 12804602.363753522,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-11",
-      "amd_var": 7747094.968108647,
-      "intel_var": 1350672.847737094
+      "amd_var": 9135431.036800686,
+      "intel_var": 12807278.428778319,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-12",
-      "amd_var": 7745045.086673265,
-      "intel_var": 1353005.1876252014
+      "amd_var": 9134115.726996496,
+      "intel_var": 12821747.291140031,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-13",
-      "amd_var": 7747465.552450834,
-      "intel_var": 1356269.2381832511
+      "amd_var": 9140404.076567687,
+      "intel_var": 12821097.243377112,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-14",
-      "amd_var": 7754042.153504115,
-      "intel_var": 1365435.041567072
+      "amd_var": 9140083.683787866,
+      "intel_var": 12844194.73950069,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-15",
-      "amd_var": 7763460.8447533045,
-      "intel_var": 1377146.37682553
+      "amd_var": 9150190.762628661,
+      "intel_var": 12884374.39648867,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-16",
-      "amd_var": 7763460.8447533045,
-      "intel_var": 1377146.37682553
+      "amd_var": 9150190.762628661,
+      "intel_var": 12884374.39648867,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-17",
-      "amd_var": 7763460.8447533045,
-      "intel_var": 1377146.37682553
+      "amd_var": 9150190.762628661,
+      "intel_var": 12884374.39648867,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-18",
-      "amd_var": 8058838.104000717,
-      "intel_var": 1433413.1649005916
+      "amd_var": 9160868.559284534,
+      "intel_var": 12870501.90994496,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-19",
-      "amd_var": 8058546.082085637,
-      "intel_var": 1433562.983939748
+      "amd_var": 9161023.148219706,
+      "intel_var": 12863994.1842968,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-20",
-      "amd_var": 8057587.096443391,
-      "intel_var": 1433615.9328715242
+      "amd_var": 9163474.99495488,
+      "intel_var": 12865591.876060048,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-21",
-      "amd_var": 7828165.384922539,
-      "intel_var": 1369623.1043712923
+      "amd_var": 8867265.562681291,
+      "intel_var": 12595761.690781819,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-22",
-      "amd_var": 8356230.9129195055,
-      "intel_var": 1353542.7265933636
+      "amd_var": 9843957.67183726,
+      "intel_var": 13411554.273146305,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-23",
-      "amd_var": 8356230.9129195055,
-      "intel_var": 1353542.7265933636
+      "amd_var": 9843957.67183726,
+      "intel_var": 13411554.273146305,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-24",
-      "amd_var": 8294418.740996679,
-      "intel_var": 1356255.467469491
+      "amd_var": 9719317.499248821,
+      "intel_var": 13311314.869507398,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-25",
-      "amd_var": 8210099.156953517,
-      "intel_var": 1379486.8048181625
+      "amd_var": 9521109.771541223,
+      "intel_var": 13163803.285038011,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-26",
-      "amd_var": 8171590.483136745,
-      "intel_var": 1382671.778691404
+      "amd_var": 9446365.840247767,
+      "intel_var": 13110133.5482599,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-27",
-      "amd_var": 8177734.096375126,
-      "intel_var": 1384065.6859581228
+      "amd_var": 9458613.89521149,
+      "intel_var": 13122680.48861285,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-28",
-      "amd_var": 8088079.531686541,
-      "intel_var": 1382050.3822575244
+      "amd_var": 9300945.24651553,
+      "intel_var": 12996561.462132009,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-29",
-      "amd_var": 8088159.643819653,
-      "intel_var": 1376079.6370934825
+      "amd_var": 9301034.548612868,
+      "intel_var": 12995311.11287057,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-06-30",
-      "amd_var": 8408862.762746694,
-      "intel_var": 1369085.6527735558
+      "amd_var": 9749097.3919622,
+      "intel_var": 13547222.884832878,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-01",
-      "amd_var": 8408862.762746694,
-      "intel_var": 1369085.6527735558
+      "amd_var": 9749097.3919622,
+      "intel_var": 13547222.884832878,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-02",
-      "amd_var": 8408862.762746694,
-      "intel_var": 1369085.6527735558
+      "amd_var": 9749097.3919622,
+      "intel_var": 13547222.884832878,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-03",
-      "amd_var": 8304730.801197478,
-      "intel_var": 1751804.2629857005
+      "amd_var": 9579698.02850059,
+      "intel_var": 13175194.160200411,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-04",
-      "amd_var": 8304730.801197478,
-      "intel_var": 1751804.2629857005
+      "amd_var": 9579698.02850059,
+      "intel_var": 13175194.160200411,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-05",
-      "amd_var": 8304730.801197478,
-      "intel_var": 1751804.2629857005
+      "amd_var": 9579698.02850059,
+      "intel_var": 13175194.160200411,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-06",
-      "amd_var": 8304730.801197478,
-      "intel_var": 1751804.2629857005
+      "amd_var": 9579698.02850059,
+      "intel_var": 13175194.160200411,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-07",
-      "amd_var": 8304730.801197478,
-      "intel_var": 1751804.2629857005
+      "amd_var": 9579698.02850059,
+      "intel_var": 13175194.160200411,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-08",
-      "amd_var": 8693258.769434556,
-      "intel_var": 1162726.0353413695
+      "amd_var": 9830511.66246064,
+      "intel_var": 12460003.780956428,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-10",
-      "amd_var": 7814280.616083172,
-      "intel_var": 1112013.360078616
+      "amd_var": 8938997.303215342,
+      "intel_var": 12462047.819489544,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-11",
-      "amd_var": 7814280.616083172,
-      "intel_var": 1112013.360078616
+      "amd_var": 8938997.303215342,
+      "intel_var": 12462047.819489544,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-12",
-      "amd_var": 7733609.408679379,
-      "intel_var": 930155.2954030072
+      "amd_var": 9119330.412952218,
+      "intel_var": 12195336.726391474,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-13",
-      "amd_var": 7733609.408679379,
-      "intel_var": 930155.2954030072
+      "amd_var": 9119330.412952218,
+      "intel_var": 12195336.726391474,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-14",
-      "amd_var": 7733609.408679379,
-      "intel_var": 930155.2954030072
+      "amd_var": 9119330.412952218,
+      "intel_var": 12195336.726391474,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-15",
-      "amd_var": 7733609.408679379,
-      "intel_var": 930155.2954030072
+      "amd_var": 9119330.412952218,
+      "intel_var": 12195336.726391474,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-16",
-      "amd_var": 6821098.493615833,
-      "intel_var": 856269.1568565508
+      "amd_var": 8146746.618519567,
+      "intel_var": 11998043.031817406,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-17",
-      "amd_var": 6821098.493615833,
-      "intel_var": 856269.1568565508
+      "amd_var": 8146746.618519567,
+      "intel_var": 11998043.031817406,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-18",
-      "amd_var": 6821098.493615833,
-      "intel_var": 856269.1568565508
+      "amd_var": 8146746.618519567,
+      "intel_var": 11998043.031817406,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-19",
-      "amd_var": 6821098.493615833,
-      "intel_var": 856269.1568565508
+      "amd_var": 8146746.618519567,
+      "intel_var": 11998043.031817406,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-20",
-      "amd_var": 6821098.493615833,
-      "intel_var": 856269.1568565508
+      "amd_var": 8146746.618519567,
+      "intel_var": 11998043.031817406,
+      "method": "closed-positive-frontier-v2"
     },
     {
       "date": "2026-07-21",
-      "amd_var": 6821098.493615833,
-      "intel_var": 856269.1568565508
+      "amd_var": 8146746.618519567,
+      "intel_var": 11998043.031817406,
+      "method": "closed-positive-frontier-v2"
     }
   ]
 }
