@@ -10,9 +10,10 @@ from matplotlib.markers import MarkerStyle
 from sklearn.neighbors import NearestNeighbors
 from sklearn.cluster import KMeans
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 import json
 
+from snapshots import build_snapshot, parse_price_usd_cents, write_snapshot
 from var_metric import VAR_METHOD, calc_auc_above_regression, terminal_crossing
 
 pd.options.display.float_format = '{:,.0f}'.format
@@ -47,54 +48,71 @@ example HTML:
     </ul>
 </div>
 """
+SOURCE_URL = "https://www.cpubenchmark.net/desktop.html#cpumark"
+captured_at = datetime.now(timezone.utc)
+analysis_date = captured_at.date().isoformat()
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-response = requests.get("https://www.cpubenchmark.net/desktop.html#cpumark", headers=headers)
+response = requests.get(SOURCE_URL, headers=headers, timeout=30)
+response.raise_for_status()
 page = BeautifulSoup(response.content, "html.parser")
 chart_body = page.find("div", class_="chart_body")
 assert isinstance(chart_body, Tag)
-cpu_list = []
-for li in chart_body.find_all("li"):
-    spans = li.find_all("span")
-    name = li.find("span", class_="prdname").text
+observations = []
+for source_rank, li in enumerate(chart_body.find_all("li"), start=1):
+    name = li.find("span", class_="prdname").get_text(strip=True)
     splits = name.split(" ")
     brand = splits[0]
     model = ' '.join(splits[1:])
-    cpu_list.append({
+    raw_score = li.find("span", class_="count").get_text(strip=True)
+    raw_price = li.find("span", class_="price-neww").get_text(strip=True)
+    raw_cpu_id = li.get("id", "").removeprefix("rk")
+    first_seen = li.find("span", class_="first-seen")
+    source_link = li.find("a")
+    observations.append({
+        "cpu_id": int(raw_cpu_id) if raw_cpu_id.isdigit() else None,
+        "source_rank": source_rank,
+        "source_href": source_link.get("href") if source_link else None,
+        "name": name,
         "brand": brand,
         "model": model,
-        "score": li.find("span", class_="count").text.replace(",", ""),
-        "price": li.find("span", class_="price-neww").text
+        "score": int(raw_score.replace(",", "")),
+        "raw_score": raw_score,
+        "price_usd_cents": parse_price_usd_cents(raw_price),
+        "raw_price": raw_price,
+        "first_seen": first_seen.get_text(strip=True) if first_seen else None,
     })
 
+snapshot = build_snapshot(observations, SOURCE_URL, response.content, captured_at)
+snapshot_path, snapshot_sha256 = write_snapshot(snapshot, captured_at)
+print(f"Snapshot saved: {snapshot_path} ({snapshot_sha256})")
+
 # %% make df
-cpu = pd.DataFrame(cpu_list)
-cpu.score = cpu.score.astype(int)
-# convert from currency format: $5,699.99
-cpu.price = cpu.price.str.replace(",", "")
-cpu.price = cpu.price.str.replace("$", "")
-cpu.price = cpu.price.str.replace("*", "")
-# replace "NA"
-cpu.price = cpu.price.str.replace("NA", "")
-# ValueError: could not convert string to float: ''
-# set empty string to NaN
-cpu.price = cpu.price.replace("", np.nan)
-cpu.price = cpu.price.astype(float)
+cpu = pd.DataFrame([{
+    "cpu_id": row["cpu_id"],
+    "brand": row["brand"],
+    "model": row["model"],
+    "score": row["score"],
+    "price": row["price_usd_cents"] / 100 if row["price_usd_cents"] is not None else np.nan,
+} for row in observations])
 cpu = cpu.dropna(subset=['price', 'score'])
 cpu["value"] = cpu.score / cpu.price
+priced_cpu_count = len(cpu)
 
 # %% based on a histogram of price, remove the outliers
 nbins = 20
 hist_values, bins = np.histogram(cpu["price"], bins=nbins)
 i = np.argmin(hist_values)
-print(f"first empty bin {bins[i]:,.0f}-{bins[i+1]:,.0f}")
-print(f"keeping values below {bins[i]:,.0f}")
+price_histogram_edges = [float(edge) for edge in bins]
+price_cutoff_usd = float(bins[i])
+print(f"first empty bin {price_cutoff_usd:,.0f}-{bins[i+1]:,.0f}")
+print(f"keeping values below {price_cutoff_usd:,.0f}")
 plt.hist(cpu["price"], bins=nbins)
 plt.savefig(OUTPUT_DIR / "price_histogram.png", dpi=150, bbox_inches='tight')
 plt.close()
 
 # %%
 # Remove outliers based on the index i
-cpu = cpu.where(cpu["price"] <= bins[i])
+cpu = cpu.where(cpu["price"] <= price_cutoff_usd)
 # remove NaN values
 cpu = cpu.dropna(subset=['price', 'score'])
 print(f"new price range is {cpu['price'].min():,.0f}-{cpu['price'].max():,.0f}")
@@ -287,7 +305,7 @@ plt.savefig(OUTPUT_DIR / "var_comparison.png", dpi=150, bbox_inches='tight')
 plt.close()
 
 # %% Update history timeseries
-today = datetime.now().strftime("%Y-%m-%d")
+today = analysis_date
 history_file = OUTPUT_DIR / "history.json"
 if history_file.exists():
     history = json.loads(history_file.read_text())
@@ -334,7 +352,7 @@ if len(history) >= 1:
     print(f"History chart generated: {OUTPUT_DIR / 'history.png'}")
 
 # %% Generate HTML report
-today = datetime.now().strftime("%Y-%m-%d")
+today = analysis_date
 
 html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -407,6 +425,24 @@ data = {
     "brand_frontiers": {brand: [{"price": p, "score": s} for p, s in zip(f['prices'], f['scores'])] for brand, f in brand_frontiers.items()},
     "frontier_extensions": frontier_extensions,
     "regression": {"slope": slope, "intercept": intercept},
+    "snapshot": {
+        "path": snapshot_path.as_posix(),
+        "sha256": snapshot_sha256,
+    },
+    "analysis": {
+        "captured_at": snapshot["captured_at"],
+        "metric": VAR_METHOD,
+        "var_brands": ["AMD", "Intel"],
+        "regression_brands": sorted(cpu["brand"].unique().tolist()),
+        "priced_cpu_count": priced_cpu_count,
+        "price_histogram_bins": nbins,
+        "price_histogram_edges_usd": price_histogram_edges,
+        "price_cutoff_usd": price_cutoff_usd,
+        "regression_pruning_stop_count": 50,
+        "regression_pruning_iterations": iteration,
+        "regression_input_count": len(cpu),
+        "regression_input_cpu_ids": sorted(cpu["cpu_id"].astype(int).tolist()),
+    },
     "history": history,
 }
 (OUTPUT_DIR / "data.json").write_text(json.dumps(data, indent=2))
