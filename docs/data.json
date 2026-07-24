@@ -214,11 +214,11 @@
     "intercept": 27885.915262076636
   },
   "snapshot": {
-    "path": "data/snapshots/2026/07/24/2026-07-24T01-52-21Z.json",
-    "sha256": "e0af90eea6db48346cefa4c3fc425ea010835257a79f5c703ac210aa1dfeab32"
+    "path": "data/snapshots/2026/07/24/2026-07-24T06-56-26Z.json",
+    "sha256": "b99647a714d5bcc2e172dd80f5f77a79f5747290adab243729a8c5436e39575c"
   },
   "analysis": {
-    "captured_at": "2026-07-24T01:52:21.228289Z",
+    "captured_at": "2026-07-24T06:56:26.755704Z",
     "metric": "closed-positive-frontier-v2",
     "var_brands": [
       "AMD",
