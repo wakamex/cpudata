@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "top10": [
     {
       "brand": "Intel",
@@ -206,11 +206,11 @@
     "intercept": 27136.085432193955
   },
   "snapshot": {
-    "path": "data/snapshots/2026/09/19/2026-09-19T06-20-59Z.json",
-    "sha256": "0c60473d647cd99a0c547df6a041d2b065a1ecec088bbb558c473ec56dea5260"
+    "path": "data/snapshots/2026/09/20/2026-09-20T06-20-52Z.json",
+    "sha256": "d278528631020c686ebe39768c3dafce6126d4fe96dbb692113cea86effab4f9"
   },
   "analysis": {
-    "captured_at": "2026-09-19T06:20:59.145165Z",
+    "captured_at": "2026-09-20T06:20:52.896865Z",
     "metric": "closed-positive-frontier-v2",
     "var_brands": [
       "AMD",
@@ -1663,6 +1663,12 @@
     },
     {
       "date": "2026-09-19",
+      "amd_var": 6192754.547667768,
+      "intel_var": 13273822.339699646,
+      "method": "closed-positive-frontier-v2"
+    },
+    {
+      "date": "2026-09-20",
       "amd_var": 6192754.547667768,
       "intel_var": 13273822.339699646,
       "method": "closed-positive-frontier-v2"
