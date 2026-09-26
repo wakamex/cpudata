@@ -1,26 +1,19 @@
 {
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "top10": [
     {
       "brand": "Intel",
       "model": "Core Ultra 5 250KF Plus",
-      "score": 50998.0,
+      "score": 51000.0,
       "price": 199.99,
-      "value": 255.00275013750687
-    },
-    {
-      "brand": "Intel",
-      "model": "Core Ultra 5 245KF",
-      "score": 43058.0,
-      "price": 178.0,
-      "value": 241.8988764044944
+      "value": 255.01275063753187
     },
     {
       "brand": "Intel",
       "model": "Core Ultra 5 250K Plus",
-      "score": 51836.0,
+      "score": 51559.0,
       "price": 219.0,
-      "value": 236.69406392694063
+      "value": 235.42922374429224
     },
     {
       "brand": "Intel",
@@ -39,9 +32,16 @@
     {
       "brand": "Intel",
       "model": "Core Ultra 7 270K Plus",
-      "score": 68411.0,
+      "score": 68412.0,
       "price": 316.47,
-      "value": 216.16898916168986
+      "value": 216.17214901886433
+    },
+    {
+      "brand": "Intel",
+      "model": "Core Ultra 5 245KF",
+      "score": 43047.0,
+      "price": 199.99,
+      "value": 215.2457622881144
     },
     {
       "brand": "Intel",
@@ -53,39 +53,39 @@
     {
       "brand": "Intel",
       "model": "Core Ultra 7 265K",
-      "score": 58572.0,
-      "price": 309.99,
-      "value": 188.94803058163166
+      "score": 58571.0,
+      "price": 335.3,
+      "value": 174.68237399343872
     },
     {
       "brand": "Intel",
       "model": "Core Ultra 7 265KF",
-      "score": 58455.0,
+      "score": 58454.0,
       "price": 335.85,
-      "value": 174.05091558731576
+      "value": 174.04793806758968
     },
     {
       "brand": "Intel",
       "model": "Core Ultra 5 225",
-      "score": 30486.0,
+      "score": 30467.0,
       "price": 175.87,
-      "value": 173.3439472337522
+      "value": 173.235912890203
     }
   ],
   "brands": [
     {
       "brand": "AMD",
       "count": 13,
-      "score": 40427.846153846156,
-      "price": 480.3692307692308,
-      "value": 96.58316764661694
+      "score": 40427.53846153846,
+      "price": 486.22923076923075,
+      "value": 95.56434122260309
     },
     {
       "brand": "Intel",
       "count": 22,
-      "score": 41559.13636363636,
-      "price": 284.03136363636366,
-      "value": 157.76169221269458
+      "score": 41546.5,
+      "price": 291.29727272727274,
+      "value": 154.8148000849367
     }
   ],
   "frontier": [
@@ -102,28 +102,24 @@
       "score": 32306.0
     },
     {
-      "price": 178.0,
-      "score": 43058.0
+      "price": 189.99,
+      "score": 43049.0
     },
     {
       "price": 199.99,
-      "score": 50998.0
+      "score": 51000.0
     },
     {
       "price": 219.0,
-      "score": 51836.0
-    },
-    {
-      "price": 309.99,
-      "score": 58572.0
+      "score": 51559.0
     },
     {
       "price": 316.47,
-      "score": 68411.0
+      "score": 68412.0
     },
     {
       "price": 658.0,
-      "score": 70094.0
+      "score": 70093.0
     },
     {
       "price": 889.0,
@@ -131,19 +127,19 @@
     }
   ],
   "var": {
-    "AMD": 6195678.747661628,
-    "Intel": 12894479.83633252
+    "AMD": 6208067.762124499,
+    "Intel": 13350436.941713043
   },
   "var_method": "closed-positive-frontier-v2",
   "brand_frontiers": {
     "AMD": [
       {
         "price": 179.99,
-        "score": 22249.0
+        "score": 22247.0
       },
       {
         "price": 239.0,
-        "score": 28025.0
+        "score": 28023.0
       },
       {
         "price": 272.62,
@@ -154,20 +150,16 @@
         "score": 32877.0
       },
       {
-        "price": 449.0,
-        "score": 39924.0
-      },
-      {
-        "price": 484.0,
-        "score": 41304.0
+        "price": 499.0,
+        "score": 41303.0
       },
       {
         "price": 509.86,
-        "score": 56046.0
+        "score": 56048.0
       },
       {
         "price": 658.0,
-        "score": 70094.0
+        "score": 70093.0
       },
       {
         "price": 889.0,
@@ -188,41 +180,37 @@
         "score": 32306.0
       },
       {
-        "price": 178.0,
-        "score": 43058.0
+        "price": 189.99,
+        "score": 43049.0
       },
       {
         "price": 199.99,
-        "score": 50998.0
+        "score": 51000.0
       },
       {
         "price": 219.0,
-        "score": 51836.0
-      },
-      {
-        "price": 309.99,
-        "score": 58572.0
+        "score": 51559.0
       },
       {
         "price": 316.47,
-        "score": 68411.0
+        "score": 68412.0
       }
     ]
   },
   "frontier_extensions": {
-    "AMD": 1129.2056065414822,
-    "Intel": 1040.7481866334094
+    "AMD": 1128.2132787670002,
+    "Intel": 1040.6897031993462
   },
   "regression": {
-    "slope": 39.88359601338576,
-    "intercept": 26902.21977264929
+    "slope": 40.29771381167688,
+    "intercept": 26474.5841737138
   },
   "snapshot": {
-    "path": "data/snapshots/2026/09/25/2026-09-25T06-24-16Z.json",
-    "sha256": "38202619c0cddbde1932b39727e072f851b83615af8729117c61621b0485f823"
+    "path": "data/snapshots/2026/09/26/2026-09-26T06-21-44Z.json",
+    "sha256": "725524163432494955ec4bcaee541e4a444cd7aed3a7d28c01907c57601fc9cb"
   },
   "analysis": {
-    "captured_at": "2026-09-25T06:24:16.932198Z",
+    "captured_at": "2026-09-26T06:21:44.743343Z",
     "metric": "closed-positive-frontier-v2",
     "var_brands": [
       "AMD",
@@ -1714,6 +1702,12 @@
       "date": "2026-09-25",
       "amd_var": 6195678.747661628,
       "intel_var": 12894479.83633252,
+      "method": "closed-positive-frontier-v2"
+    },
+    {
+      "date": "2026-09-26",
+      "amd_var": 6208067.762124499,
+      "intel_var": 13350436.941713043,
       "method": "closed-positive-frontier-v2"
     }
   ]
