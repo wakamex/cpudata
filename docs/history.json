@@ -1726,5 +1726,11 @@
     "amd_var": 1397918.810265731,
     "intel_var": 10037152.022266727,
     "method": "closed-positive-frontier-v2"
+  },
+  {
+    "date": "2026-11-17",
+    "amd_var": 1397372.9457900152,
+    "intel_var": 10041197.60351649,
+    "method": "closed-positive-frontier-v2"
   }
 ]
